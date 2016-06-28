@@ -7,7 +7,7 @@
 #define PLH__ASMHelper__D_INT8 1
 #define PLH__ASMHelper__D_INVALID -1
 #include "../../subhook/windows_platform_defs.h"
-#include "../Capstone/include/Capstone.h"
+#include "../Capstone/include/capstone.h"
 
 typedef struct _my_memory_holder_s
 {

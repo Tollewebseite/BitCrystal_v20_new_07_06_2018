@@ -148,21 +148,21 @@ QMAKE_CXXFLAGS_WARN_ON = -fno-guess-branch-probability -frandom-seed=1984 -Wno-u
 # Input
 DEPENDPATH += src src/json src/qt
 HEADERS += src/functions_hook/subhook/windows_platform_defs.h \
-    src/functions_hook/polyhook_lib/Capstone/utils.h \
-    src/functions_hook/polyhook_lib/Capstone/MCInst.h \
-    src/functions_hook/polyhook_lib/Capstone/MCInstrDesc.h \
-    src/functions_hook/polyhook_lib/Capstone/MCRegisterInfo.h \
-    src/functions_hook/polyhook_lib/Capstone/SStream.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.h \
-	src/functions_hook/polyhook_lib/Capstone/cs.h \
+    src/functions_hook/polyhook_lib/Capstone/my_utils.h \
+    src/functions_hook/polyhook_lib/Capstone/my_MCInst.h \
+    src/functions_hook/polyhook_lib/Capstone/my_MCInstrDesc.h \
+    src/functions_hook/polyhook_lib/Capstone/my_MCRegisterInfo.h \
+    src/functions_hook/polyhook_lib/Capstone/my_SStream.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonBaseInfo.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassembler.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassemblerDecoder.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonATTInstPrinter.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonInstPrinter.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonIntelInstPrinter.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonMapping.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonMCTargetDesc.h \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonModule.h \
+	src/functions_hook/polyhook_lib/Capstone/my_cs.h \
     src/functions_hook/mhook_platform_defs.h \
     src/minizip/crypt.h \
     src/minizip/miniunz.h \
@@ -270,21 +270,21 @@ HEADERS += src/functions_hook/subhook/windows_platform_defs.h \
     src/sph_types.h
 
 SOURCES += src/functions_hook/subhook/windows_platform_defs.c \
-    src/functions_hook/polyhook_lib/Capstone/utils.c \
-    src/functions_hook/polyhook_lib/Capstone/MCInst.c \
-    src/functions_hook/polyhook_lib/Capstone/MCInstrDesc.c \
-    src/functions_hook/polyhook_lib/Capstone/MCRegisterInfo.c \
-    src/functions_hook/polyhook_lib/Capstone/SStream.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.c \
-	src/functions_hook/polyhook_lib/Capstone/cs.c \
+    src/functions_hook/polyhook_lib/Capstone/my_utils.c \
+    src/functions_hook/polyhook_lib/Capstone/my_MCInst.c \
+    src/functions_hook/polyhook_lib/Capstone/my_MCInstrDesc.c \
+    src/functions_hook/polyhook_lib/Capstone/my_MCRegisterInfo.c \
+    src/functions_hook/polyhook_lib/Capstone/my_SStream.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonBaseInfo.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassembler.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassemblerDecoder.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonATTInstPrinter.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonInstPrinter.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonIntelInstPrinter.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonMapping.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonMCTargetDesc.c \
+	src/functions_hook/polyhook_lib/Capstone/arch/my_CommonModule.c \
+	src/functions_hook/polyhook_lib/Capstone/my_cs.c \
     src/functions_hook/mhook_platform_defs.c \
     src/minizip/ioapi.c \
     src/minizip/mztools.c \

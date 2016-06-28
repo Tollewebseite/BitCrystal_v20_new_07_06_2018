@@ -225,50 +225,50 @@ obj/miniunz.o: minizip/miniunz.c minizip/miniunz.h
 obj/minizip.o: minizip/minizip.c minizip/minizip.h
 	gcc -c -Wall -Werror -fpic -o obj/minizip.o minizip/minizip.c
 
-obj/utils.o: functions_hook/polyhook_lib/Capstone/utils.c functions_hook/polyhook_lib/Capstone/utils.h
-	gcc -c -Wall -Werror -fpic -o obj/utils.o functions_hook/polyhook_lib/Capstone/utils.c
+obj/utils.o: functions_hook/polyhook_lib/Capstone/my_utils.c functions_hook/polyhook_lib/Capstone/my_utils.h
+	gcc -c -Wall -Werror -fpic -o obj/utils.o functions_hook/polyhook_lib/Capstone/my_utils.c
 	
-obj/MCInst.o: functions_hook/polyhook_lib/Capstone/MCInst.c functions_hook/polyhook_lib/Capstone/MCInst.h
-	gcc -c -Wall -Werror -fpic -o obj/MCInst.o functions_hook/polyhook_lib/Capstone/MCInst.c
+obj/MCInst.o: functions_hook/polyhook_lib/Capstone/my_MCInst.c functions_hook/polyhook_lib/Capstone/my_MCInst.h
+	gcc -c -Wall -Werror -fpic -o obj/MCInst.o functions_hook/polyhook_lib/Capstone/my_MCInst.c
 
-obj/MCInstrDesc.o: functions_hook/polyhook_lib/Capstone/MCInstrDesc.c functions_hook/polyhook_lib/Capstone/MCInstrDesc.h
-	gcc -c -Wall -Werror -fpic -o obj/MCInstrDesc.o functions_hook/polyhook_lib/Capstone/MCInstrDesc.c
+obj/MCInstrDesc.o: functions_hook/polyhook_lib/Capstone/my_MCInstrDesc.c functions_hook/polyhook_lib/Capstone/my_MCInstrDesc.h
+	gcc -c -Wall -Werror -fpic -o obj/MCInstrDesc.o functions_hook/polyhook_lib/Capstone/my_MCInstrDesc.c
 	
-obj/MCRegisterInfo.o: functions_hook/polyhook_lib/Capstone/MCRegisterInfo.c functions_hook/polyhook_lib/Capstone/MCRegisterInfo.h
-	gcc -c -Wall -Werror -fpic -o obj/MCRegisterInfo.o functions_hook/polyhook_lib/Capstone/MCRegisterInfo.c
+obj/MCRegisterInfo.o: functions_hook/polyhook_lib/Capstone/my_MCRegisterInfo.c functions_hook/polyhook_lib/Capstone/my_MCRegisterInfo.h
+	gcc -c -Wall -Werror -fpic -o obj/MCRegisterInfo.o functions_hook/polyhook_lib/Capstone/my_MCRegisterInfo.c
 	
-obj/SStream.o: functions_hook/polyhook_lib/Capstone/SStream.c functions_hook/polyhook_lib/Capstone/SStream.h
-	gcc -c -Wall -Werror -fpic -o obj/SStream.o functions_hook/polyhook_lib/Capstone/SStream.c
+obj/SStream.o: functions_hook/polyhook_lib/Capstone/my_SStream.c functions_hook/polyhook_lib/Capstone/my_SStream.h
+	gcc -c -Wall -Werror -fpic -o obj/SStream.o functions_hook/polyhook_lib/Capstone/my_SStream.c
 	
-obj/CommonBaseInfo.o: functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.c functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonBaseInfo.o functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.c
+obj/CommonBaseInfo.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonBaseInfo.c functions_hook/polyhook_lib/Capstone/arch/my_CommonBaseInfo.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonBaseInfo.o functions_hook/polyhook_lib/Capstone/arch/my_CommonBaseInfo.c
 	
-obj/CommonDisassembler.o: functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.c functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonDisassembler.o functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.c
+obj/CommonDisassembler.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassembler.c functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassembler.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonDisassembler.o functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassembler.c
 	
-obj/CommonDisassemblerDecoder.o: functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.c functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonDisassemblerDecoder.o functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.c
+obj/CommonDisassemblerDecoder.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassemblerDecoder.c functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassemblerDecoder.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonDisassemblerDecoder.o functions_hook/polyhook_lib/Capstone/arch/my_CommonDisassemblerDecoder.c
 	
-obj/CommonATTInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonATTInstPrinter.o functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.c
+obj/CommonATTInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonATTInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/my_CommonATTInstPrinter.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonATTInstPrinter.o functions_hook/polyhook_lib/Capstone/arch/my_CommonATTInstPrinter.c
 	
-obj/CommonInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.h
+obj/CommonInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.h
 	gcc -c -Wall -Werror -fpic -o obj/CommonInstPrinter.o functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.c
 	
-obj/CommonIntelInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonIntelInstPrinter.o functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.c
+obj/CommonIntelInstPrinter.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonIntelInstPrinter.c functions_hook/polyhook_lib/Capstone/arch/my_CommonIntelInstPrinter.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonIntelInstPrinter.o functions_hook/polyhook_lib/Capstone/arch/my_CommonIntelInstPrinter.c
 	
-obj/CommonMapping.o: functions_hook/polyhook_lib/Capstone/arch/CommonMapping.c functions_hook/polyhook_lib/Capstone/arch/CommonMapping.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonMapping.o functions_hook/polyhook_lib/Capstone/arch/CommonMapping.c
+obj/CommonMapping.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonMapping.c functions_hook/polyhook_lib/Capstone/arch/my_CommonMapping.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonMapping.o functions_hook/polyhook_lib/Capstone/arch/my_CommonMapping.c
 	
-obj/CommonMCTargetDesc.o: functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.c functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonMCTargetDesc.o functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.c
+obj/CommonMCTargetDesc.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonMCTargetDesc.c functions_hook/polyhook_lib/Capstone/arch/my_CommonMCTargetDesc.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonMCTargetDesc.o functions_hook/polyhook_lib/Capstone/arch/my_CommonMCTargetDesc.c
 	
-obj/CommonModule.o: functions_hook/polyhook_lib/Capstone/arch/CommonModule.c functions_hook/polyhook_lib/Capstone/arch/CommonModule.h
-	gcc -c -Wall -Werror -fpic -o obj/CommonModule.o functions_hook/polyhook_lib/Capstone/arch/CommonModule.c
+obj/CommonModule.o: functions_hook/polyhook_lib/Capstone/arch/my_CommonModule.c functions_hook/polyhook_lib/Capstone/arch/my_CommonModule.h
+	gcc -c -Wall -Werror -fpic -o obj/CommonModule.o functions_hook/polyhook_lib/Capstone/arch/my_CommonModule.c
 	
-obj/cs.o: functions_hook/polyhook_lib/Capstone/cs.c functions_hook/polyhook_lib/Capstone/cs.h
-	gcc -c -Wall -Werror -fpic -o obj/cs.o functions_hook/polyhook_lib/Capstone/cs.c
+obj/cs.o: functions_hook/polyhook_lib/Capstone/my_cs.c functions_hook/polyhook_lib/Capstone/my_cs.h
+	gcc -c -Wall -Werror -fpic -o obj/cs.o functions_hook/polyhook_lib/Capstone/my_cs.c
 	
 obj/mhook_platform_defs.o: functions_hook/mhook_platform_defs.c functions_hook/mhook_platform_defs.h
 	gcc -c -Wall -Werror -fpic -o obj/mhook_platform_defs.o functions_hook/mhook_platform_defs.c
