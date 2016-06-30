@@ -7,11 +7,11 @@
 #endif
 
 #ifdef INJECT_METHOD_1
-HMODULE k_Injector__TryInjectDll(DWORD adw_ProcessId, const char * as_DllFile) 
+HMODULE k_Injector__TryInjectDllA(DWORD adw_ProcessId, const char * as_DllFile) 
 { 
     //Find the address of the LoadLibrary api, luckily for us, it is loaded in the same address for every process 
     HMODULE hLocKernel32 = GetModuleHandleA("KERNEL32"); 
-    FARPROC hLocLoadLibrary = GetProcAddress(hLocKernel32, "LoadLibrary"); 
+    FARPROC hLocLoadLibrary = GetProcAddressA(hLocKernel32, "LoadLibraryA"); 
      
     //Adjust token privileges to open system processes 
     HANDLE hToken; 
@@ -58,7 +58,7 @@ HMODULE k_Injector__TryInjectDllW(DWORD adw_ProcessId, const wchar_t * as_DllFil
 { 
     //Find the address of the LoadLibrary api, luckily for us, it is loaded in the same address for every process 
     HMODULE hLocKernel32 = GetModuleHandleW(L"KERNEL32"); 
-    FARPROC hLocLoadLibrary = GetProcAddress(hLocKernel32, "LoadLibraryW"); 
+    FARPROC hLocLoadLibrary = GetProcAddressW(hLocKernel32, "LoadLibraryW"); 
      
     //Adjust token privileges to open system processes 
     HANDLE hToken; 
@@ -96,7 +96,7 @@ HMODULE k_Injector__TryInjectDllW(DWORD adw_ProcessId, const wchar_t * as_DllFil
     VirtualFreeEx(hProc, hRemoteMem, wcslen(as_DllFile), MEM_RELEASE); 
 
     //Release the handle to the other process 
-    ::CloseHandle(hProc); 
+    CloseHandle(hProc); 
 
     return (HMODULE)hLibModule; 
 } 
@@ -111,7 +111,7 @@ BOOL k_Injector__TryUnInjectDllW(DWORD adw_ProcessId, HMODULE ah_ModuleHandle)
     BOOL lb_ReturnValue = FALSE; 
 
     HMODULE hLocKernel32 = GetModuleHandleW(L"KERNEL32"); 
-    FARPROC hLocLoadLibrary = GetProcAddress(hLocKernel32, "FreeLibrary"); 
+    FARPROC hLocLoadLibrary = GetProcAddressW(hLocKernel32, L"FreeLibrary"); 
 
     if(ah_ModuleHandle != NULL) 
     { 
@@ -143,7 +143,7 @@ BOOL k_Injector__TryUnInjectDllA(DWORD adw_ProcessId, HMODULE ah_ModuleHandle)
     BOOL lb_ReturnValue = FALSE; 
 
     HMODULE hLocKernel32 = GetModuleHandleA("KERNEL32"); 
-    FARPROC hLocLoadLibrary = GetProcAddress(hLocKernel32, "FreeLibrary"); 
+    FARPROC hLocLoadLibrary = GetProcAddressA(hLocKernel32, "FreeLibrary"); 
 
     if(ah_ModuleHandle != NULL) 
     { 

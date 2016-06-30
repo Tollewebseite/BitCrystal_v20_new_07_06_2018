@@ -367,9 +367,9 @@ BOOL Mhook_Unhook(PVOID * ppHookedFunctionP) {
 			if(fp!=ppHookedFunction)
 			{
 				if(mhooks_subhooks[i]->overrideFunctionAddress==NULL)
-                                        return FALSE;
+                                        continue;
                                 if(mhooks_subhooks[i]->overrideFunctionAddress!=ppHookedFunction)
-                                        return FALSE;
+                                        continue;
 			}
 			tt = mach_unoverride_ptr_my(mhooks_subhooks[i]);
 			if(tt!=err_none)
