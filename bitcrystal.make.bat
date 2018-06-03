@@ -12,14 +12,16 @@ if exist C:\deps (
 	set /A DIR_EXISTS=%DIR_EXISTS%+1
 )
 
-if exist C:\mingw32 (
+if exist C:\MinGW (
 	set MINGW32_EXIST=1
 	set /A DIR_EXISTS=%DIR_EXISTS%+1
+	set PATH=C:\MinGW\bin;!PATH!
 )
 
 if exist C:\Qt (
 	set QT_EXIST=1
 	set /A DIR_EXISTS=%DIR_EXISTS%+1
+	set PATH=C:\Qt\4.8.6\bin;!PATH!
 )
 
 if exist C:\MinGWcoin (
@@ -31,6 +33,7 @@ if %DIR_EXISTS%==4 goto done else goto BatchGotAdmin
 rem this not by me
 
 :BatchGotAdmin
+
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
@@ -65,8 +68,8 @@ if %QT_EXIST%==0 (
 )
 
 if %MINGW32_EXIST%==0 (
-	mklink C:\mingw32 %~dp0build_deps\mingw32
-	set PATH=C:\mingw32\bin;%PATH%
+	mklink C:\MinGW %~dp0build_deps\MinGW
+	set PATH=C:\MinGW\bin;%PATH%
 )
 
 if %MINGWCOIN_EXIST%==0 (
