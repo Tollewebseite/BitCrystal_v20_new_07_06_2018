@@ -4,7 +4,7 @@ set DEPS_EXIST=0
 set MINGW32_EXIST=0
 set QT_EXIST=0
 set MINGWCOIN_EXIST=0
-set CLEAN="true"
+set CLEAN="false"
 
 set /A DIR_EXISTS=0
 if exist C:\deps (
@@ -12,16 +12,16 @@ if exist C:\deps (
 	set /A DIR_EXISTS=%DIR_EXISTS%+1
 )
 
-if exist C:\MinGW (
-	set MINGW32_EXIST=1
-	set /A DIR_EXISTS=%DIR_EXISTS%+1
-	set PATH=C:\MinGW\bin;!PATH!
-)
-
 if exist C:\Qt (
 	set QT_EXIST=1
 	set /A DIR_EXISTS=%DIR_EXISTS%+1
-	set PATH=C:\Qt\4.8.6\bin;!PATH!
+	set PATH=C:\Qt\4.8.6MW\bin;
+)
+
+if exist C:\MinGW (
+	set MINGW32_EXIST=1
+	set /A DIR_EXISTS=%DIR_EXISTS%+1
+	set PATH=C:\MinGW\bin;%PATH%
 )
 
 if exist C:\MinGWcoin (
@@ -59,21 +59,21 @@ if '%errorlevel%' NEQ '0' (
 
 rem this script here is by me
 if %DEPS_EXIST%==0 (
-	mklink C:\deps %~dp0build_deps\deps
+	mklink /D C:\deps %~dp0build_deps\deps
 )
 
 if %QT_EXIST%==0 (
-	mklink C:\Qt %~dp0build_deps\Qt
-	set PATH=C:\Qt\4.8.6\bin;%PATH%
+	mklink /D C:\Qt %~dp0build_deps\Qt
+	set PATH=C:\Qt\4.8.6MW\bin;
 )
 
 if %MINGW32_EXIST%==0 (
-	mklink C:\MinGW %~dp0build_deps\MinGW
+	mklink /D C:\MinGW %~dp0build_deps\MinGW
 	set PATH=C:\MinGW\bin;%PATH%
 )
 
 if %MINGWCOIN_EXIST%==0 (
-	mklink C:\MinGWcoin %~dp0build_deps\MinGWcoin
+	mklink /D C:\MinGWcoin %~dp0build_deps\MinGWcoin
 )
 
 :done
