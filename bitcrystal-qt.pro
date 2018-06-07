@@ -20,7 +20,7 @@ CONFIG += static
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
 # Uncomment dep locations below if building on Windows systems
-BOOST_LIB_SUFFIX=-mgw49-mt-s-1_55
+BOOST_LIB_SUFFIX=-mgw63-mt-s-1_55
 BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
 BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
 BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
@@ -153,20 +153,20 @@ HEADERS += src/functions_hook/subhook/windows_platform_defs.h \
     src/functions_hook/polyhook_lib/Capstone/MCInstrDesc.h \
     src/functions_hook/polyhook_lib/Capstone/MCRegisterInfo.h \
     src/functions_hook/polyhook_lib/Capstone/SStream.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.h \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.h \
-	src/functions_hook/polyhook_lib/Capstone/cs.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.h \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.h \
+        src/functions_hook/polyhook_lib/Capstone/cs.h \
     src/functions_hook/mhook_platform_defs.h \
     src/minizip/crypt.h \
     src/minizip/miniunz.h \
-	src/minizip/minizip.h \
+        src/minizip/minizip.h \
     src/minizip/ioapi.h \
     src/minizip/iowin32.h \
     src/minizip/mztools.h \
@@ -174,16 +174,16 @@ HEADERS += src/functions_hook/subhook/windows_platform_defs.h \
     src/minizip/zip.h \
     src/minizip/unzip.h \
     src/convert_functions.h \
-	src/base64.h \
-	src/random.h \
-	src/base_security.h \
-	src/qt/bitcoingui.h \
+        src/base64.h \
+        src/random.h \
+        src/base_security.h \
+        src/qt/bitcoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
     src/qt/sendcoinsdialog.h \
-	src/qt/coincontroldialog.h \
-	src/qt/coincontroltreewidget.h \
+        src/qt/coincontroldialog.h \
+        src/qt/coincontroltreewidget.h \
     src/qt/addressbookpage.h \
     src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
@@ -194,7 +194,7 @@ HEADERS += src/functions_hook/subhook/windows_platform_defs.h \
     src/base58.h \
     src/bignum.h \
     src/checkpoints.h \
-	src/coincontrol.h \
+        src/coincontrol.h \
     src/compat.h \
     src/sync.h \
     src/util.h \
@@ -275,16 +275,16 @@ SOURCES += src/functions_hook/subhook/windows_platform_defs.c \
     src/functions_hook/polyhook_lib/Capstone/MCInstrDesc.c \
     src/functions_hook/polyhook_lib/Capstone/MCRegisterInfo.c \
     src/functions_hook/polyhook_lib/Capstone/SStream.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.c \
-	src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.c \
-	src/functions_hook/polyhook_lib/Capstone/cs.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonBaseInfo.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassembler.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonDisassemblerDecoder.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonATTInstPrinter.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonInstPrinter.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonIntelInstPrinter.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonMapping.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonMCTargetDesc.c \
+        src/functions_hook/polyhook_lib/Capstone/arch/CommonModule.c \
+        src/functions_hook/polyhook_lib/Capstone/cs.c \
     src/functions_hook/mhook_platform_defs.c \
     src/minizip/ioapi.c \
     src/minizip/mztools.c \
@@ -294,17 +294,17 @@ SOURCES += src/functions_hook/subhook/windows_platform_defs.c \
     src/minizip/miniunz.c \
     src/minizip/minizip.c \
     src/convert_functions.cpp \
-	src/base64.cpp \
-	src/random.cpp \
-	src/base_security.cpp \
-	src/qt/bitcoin.cpp \
+        src/base64.cpp \
+        src/random.cpp \
+        src/base_security.cpp \
+        src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
     src/qt/sendcoinsdialog.cpp \
-	src/qt/coincontroldialog.cpp \
-	src/qt/coincontroltreewidget.cpp \
+        src/qt/coincontroldialog.cpp \
+        src/qt/coincontroltreewidget.cpp \
     src/qt/addressbookpage.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \

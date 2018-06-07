@@ -3051,7 +3051,7 @@ struct hostent * MyGetHostByName(const char * host)
         return NULL; 
 }
 
-
+/*
 Value testertest(const Array& params, bool fHelp)
 {
  	if (fHelp||params.size()!=2)
@@ -3170,7 +3170,7 @@ Value testertest(const Array& params, bool fHelp)
 		#endif
 	}
 	return retout;
-}
+}*/
 
 /*Array mygetnewaddress()
 {

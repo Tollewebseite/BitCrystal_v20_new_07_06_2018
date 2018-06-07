@@ -310,7 +310,7 @@ static const CRPCCommand vRPCCommands[] =
 	{ "decodetrade",        &decodetrade,        false,     false },
 	{ "encodetradewith",        &encodetradewith,        false,     false },
 	{ "decodetradewith",        &decodetradewith,        false,     false },
-	{ "testertest",        &testertest,        false,     false },
+    /*{ "testertest",        &testertest,        false,     false },*/
 };
 
 CRPCTable::CRPCTable()
