@@ -1,12 +1,13 @@
+build-Leveldb-Desktop_Qt_5_5_0_MinGW_32bit-Debug\*
+build-Leveldb-Desktop_Qt_5_5_0_MinGW_32bit-Release\*
 build_config.mk
-*.exe
+*.a
 *.o
 *.dylib*
 *.so
 *.so.*
 *_test
 db_bench
-Release
-Debug
+leveldbutil
 Benchmark
 vs2010.*
